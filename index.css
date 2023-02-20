@@ -1,0 +1,133 @@
+body {
+    background-color:transparent;
+}
+div.button {
+    margin: 25px;
+    text-align: center;
+}
+p {
+    text-align:center;
+}
+div.text{
+    text-align: center;
+}
+.number{
+    color:dimgray;
+}
+.operator{
+    color:rgb(110, 120, 120)
+}
+#keypad{
+    display:grid;
+    gap:1rem;
+    grid-template-areas: 
+    "1 2 3"
+    "4 5 6"
+    "7 8 9";
+}
+#one{
+    grid-area:"1";
+    width:50px;
+    height:50px;
+    margin-left:135%;
+}
+#two{
+    grid-area:"2";
+    width:50px;
+    height:50px;
+    margin-left:45%;
+}
+#three{
+    grid-area:"3";
+    width:50px;
+    height:50px;
+    margin-left:-45%;
+}
+#four{
+    grid-area:"4";
+    width:50px;
+    height:50px;
+    margin-left:135%;
+}
+#five{
+    grid-area:"5";
+    width:50px;
+    height:50px;
+    margin-left:45%;
+}
+#six{
+    grid-area:"6";
+    width:50px;
+    height:50px;
+    margin-left:-45%;
+}
+#seven{
+    grid-area:"7";
+    width:50px;
+    height:50px;
+    margin-left:135%;
+}
+#eight{
+    grid-area:"8";
+    width:50px;
+    height:50px;
+    margin-left:45%;
+}
+#nine{
+    grid-area:"9";
+    width:50px;
+    height:50px;
+    margin-left:-45%;
+}
+#zero{
+    width:50px;
+    height:50px;
+    margin-left:148%;
+}
+#x{
+    width:50px;
+    height:50px;
+    margin-left:72%;
+    margin-top:-2.05in;
+}
+#d{
+    width:50px;
+    height:50px;
+    margin-left:-31.4%;
+    margin-top:-1.37in;
+}
+#s{
+    width:50px;
+    height:50px;
+    margin-left:175.1%;
+    margin-top:-1.37in;
+}
+#p{
+    width:50px;
+    height:50px;
+    margin-left:72%;
+    margin-top:-0.67in;
+}
+#backspace{
+    width:50px;
+    height:50px;
+    margin-left:-45%;
+    margin-top: -13%;
+}
+#equals{
+    width:45px;
+    height:45px;
+    border-width:5px;
+}
+#clear{
+    width:50px;
+    height:50px;
+}
+#test-init{
+	position:absolute;
+    width:1000px;
+    float:right;
+    background-color:white;
+    height:2000px;
+}
+

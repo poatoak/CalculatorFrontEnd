@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <meta charset = "utf-8">
+        <script type = "text/javascript" src = "hello.js"></script>
+        <link rel = "stylesheet" href = "index.css">
+        <link rel="stylesheet" href="../SVGTree-master/SVGTree-master/src/svgtree.css">
+        <script src="../SVGTree-master/SVGTree-master/src/svgtree.js"></script>
+        <title>FREE CALCULATOR</title>
+    </head>
+    <body>
+        <p>
+            FREE CALCULATOR
+        </p>
+        <div class = "text">
+            <input type = "text" id = "text1" name = "text1" readonly>
+        </div>
+        <div class = "button">
+            <button id = "equals" type = "button" onclick = "functionClick()">
+                =
+            </button>
+        </div>
+        <div id = "keypad">
+            <button id = "one" class = "number" type="button" onclick = "textFieldChanger('1')">1</button>
+            <button id = "two" class = "number" type="button" onclick = "textFieldChanger('2')">2</button>
+            <button id = "three" class = "number" type="button" onclick = "textFieldChanger('3')">3</button>
+            <button id = "four" class = "number" type="button" onclick = "textFieldChanger('4')">4</button>
+            <button id = "five" class = "number" type="button" onclick = "textFieldChanger('5')">5</button>
+            <button id = "six" class = "number" type="button" onclick = "textFieldChanger('6')">6</button>
+            <button id = "seven" class = "number" type="button" onclick = "textFieldChanger('7')">7</button>
+            <button id = "eight" class = "number" type="button" onclick = "textFieldChanger('8')">8</button>
+            <button id = "nine" class = "number" type="button" onclick = "textFieldChanger('9')">9</button>
+            <button id = "zero" class = "number" type="button" onclick = "textFieldChanger('0')">0</button>
+            <button id = "x" class = "operator" type="button" onclick = "textFieldChanger(' * ')">*</button>
+            <button id = "d" class = "operator"  type="button" onclick = "textFieldChanger(' / ')">/</button>
+            <button id = "s" class = "operator"  type="button" onclick = "textFieldChanger(' - ')">-</button>
+            <button id = "p" class = "operator" type="button" onclick = "textFieldChanger(' + ')">+</button>
+            <button id = "backspace" type="button" onclick = "textFieldChanger('back')">{--</button>
+            <button id = "clear" type="button" onclick = "textFieldChanger('clear')">clear</button>
+        </div>
+        <div id="test-init"></div>
+    </body>
+</HTML>
