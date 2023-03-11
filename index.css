@@ -130,4 +130,6 @@ div.text{
     background-color:white;
     height:2000px;
 }
-
+#var{
+    display:none;
+}

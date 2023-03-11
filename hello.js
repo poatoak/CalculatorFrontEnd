@@ -1,4 +1,5 @@
 async function functionClick() {
+    document.getElementById("test-init").innerHTML = "";
     // document.body.style.backgroundColor = "blue";
     var userInput = document.getElementById("text1").value;
     var url = "https://calculatorendpoint.azurewebsites.net/api/CalcTrigger";
@@ -13,9 +14,10 @@ async function functionClick() {
             .then(response => {
                 document.getElementById("text1").value = parseFloat(response.split('|')[0])
                 maketree(response.split('|')[1])
-                console.log(response.split('|')[1])
+                // console.log(response.split('|')[1])
             });
-    } 
+            document.getElementById("equals").style.borderColor='#FF0000';
+    }
 }
 function colorChange() {
     var operatorsInARow = 0;
@@ -26,7 +28,6 @@ function colorChange() {
     }
     for(var i = 0; i < text1.length; i++) {
         var positionInEquation = text1.substring(i, i+1);
-        console.log(positionInEquation);
         if (operators.includes(positionInEquation) && operators.includes(text1.substring(i+1, i+2))) {
                 document.getElementById("equals").style.borderColor='#FF0000';
                 return;
@@ -49,6 +50,13 @@ function colorChange() {
 //     return false;
 // }
 function textFieldChanger(textToUse){
+    let clicks = document.getElementById("var").getAttribute('data-value');
+    if (clicks == 0) {
+        document.getElementById("text1").value += textToUse;
+        document.getElementById("equals").style.borderColor='#FF0000';
+        document.getElementById("var").setAttribute('data-value', '2');
+        return;
+    }
     var text1 = document.getElementById("text1").value;
     if (textToUse === 'clear') {
         document.getElementById("text1").value = '';
@@ -69,7 +77,7 @@ function textFieldChanger(textToUse){
 }
 function maketree(newick) {
     var container = document.querySelector('#test-init');
-    console.log(container);
+    // console.log(container);
     new SVGTree(newick + ';', container, {
         'nodes': 'circle',
         'edges': 'straight',
